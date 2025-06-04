@@ -1,0 +1,20 @@
+Vienna is an offline-first life management web app.
+
+## offline-first
+We use zustand as our backend since this is all local. The zustand stores store all the data.
+
+## data model
+- All entities (tasks, projects, notes, timers, counters, nutrition, habits) support soft delete and restore.
+- All entities support tags for global cross-feature filtering.
+- Hydration is tracked as a counter, not a separate store.
+
+## export/import
+- All data can be exported as a SQLite database file.
+- (Optional) Support for importing from a SQLite backup.
+
+## tag management
+- Tags are managed globally via a tag manager for CRUD and cross-feature filtering.
+
+## features
+- Task management, timer/stopwatch, counters, nutrition tracking, habits, projects, notes, global tags, soft delete/restore, SQLite export, offline-first.
+- Advanced: search, analytics/dashboard, reminders, recurring tasks/habits, custom views, quick add, theming, encryption, versioning/undo, attachments, API/plugins.

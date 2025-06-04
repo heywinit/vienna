@@ -4,6 +4,7 @@ import { persist } from "zustand/middleware";
 // Task and related types
 export type TaskStatus = "todo" | "in-progress" | "done" | "blocked";
 export type Priority = "low" | "medium" | "high" | "urgent";
+export type TaskType = "task" | "event";
 
 export interface Annotation {
   time: string; // ISO string
@@ -12,6 +13,7 @@ export interface Annotation {
 
 export interface Task {
   id: string;
+  type: TaskType;
   status: TaskStatus;
   title: string;
   project: string; // project id
@@ -24,6 +26,7 @@ export interface Task {
   dueDate?: string; // ISO string | undefined
   priority: Priority;
   annotations: Annotation[];
+  deleted?: boolean;
 }
 
 interface TasksState {

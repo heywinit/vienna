@@ -5,7 +5,11 @@ export interface Project {
   id: string;
   name: string;
   description?: string;
+  color: string;
+  priority: number;
+  icon: string; //emoji or lucide icon
   created: string; // ISO string
+  deleted?: boolean;
 }
 
 interface ProjectsState {
