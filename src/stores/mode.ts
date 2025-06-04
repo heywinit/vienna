@@ -22,7 +22,22 @@ interface ModeState {
 export const useModeStore = create<ModeState>()(
   persist(
     (set) => ({
-      modes: [],
+      modes: [
+        {
+          id: "locked-in",
+          name: "Locked In",
+          description: "Deep focus mode for maximum productivity.",
+          icon: "🔒",
+          deleted: false,
+        },
+        {
+          id: "lackin",
+          name: "Lackin",
+          description: "Relaxed mode for light work or breaks.",
+          icon: "😌",
+          deleted: false,
+        },
+      ],
       activeModeId: null,
       addMode: (mode) =>
         set((state) => ({
