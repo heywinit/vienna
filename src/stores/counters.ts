@@ -49,7 +49,20 @@ interface CountersState {
 export const useCountersStore = create<CountersState>()(
   persist(
     (set) => ({
-      counters: [],
+      counters: [
+        {
+          id: "hydration",
+          name: "Hydration",
+          value: 0,
+          description: "Track your daily water intake",
+          created: new Date().toISOString(),
+          resetPeriod: "daily",
+          lastReset: new Date().toISOString(),
+          tags: [],
+          history: [],
+          deleted: false,
+        },
+      ],
       addCounter: (counter) => {
         const id = counter.id || `${counter.name}-${Date.now()}`;
         set((state) => ({

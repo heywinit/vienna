@@ -5,7 +5,7 @@ export interface Mode {
   id: string;
   name: string;
   description?: string;
-  icon?: string; // emoji or icon string
+  icon: string; // emoji or icon string
   deleted?: boolean;
 }
 
