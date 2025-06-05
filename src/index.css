@@ -8,7 +8,9 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html,
   body {
+    font-family: "Geist Mono", monospace !important;
     @apply bg-background text-foreground;
   }
 }
