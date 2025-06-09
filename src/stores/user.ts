@@ -4,7 +4,6 @@ import { persist } from "zustand/middleware";
 export interface UserInfo {
   name: string;
   email: string;
-  avatar?: string; // Can be a URL, emoji, or icon name
 }
 
 interface UserState {
@@ -13,9 +12,8 @@ interface UserState {
 }
 
 const defaultUser: UserInfo = {
-  name: "",
-  email: "",
-  avatar: undefined,
+  name: "bigman",
+  email: "bigman@gmail.com",
 };
 
 export const useUserStore = create<UserState>()(
